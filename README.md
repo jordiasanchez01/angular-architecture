@@ -1,9 +1,9 @@
 # ![Angular logo][]
 
 ![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![](	https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-# <Nombre de la aplicación>
+# Angular Clean Architecture
 
-Descripción de la aplicación 
+Arquitectura basada en una arquitectura limpia y principios sólidos.
 
 ## Comenzando 🚀
 
@@ -15,16 +15,16 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 | Herramienta |  Versión                |
 | :-------- |  :------------------------- |
-| `Node Js` |**14.1** |
-| `Angular Cli` | **16.1.1** |
-| `Pakage Manager (NPM)` |  **1.62.3** |
+| `Node Js` |**20.7.0** |
+| `Angular Cli` | **16.2.10** |
+| `Pakage Manager (NPM)` |  **10.1.0** |
 | `OS` |  **Ventura 13.1** |
 
 ### Puesta en marcha 🔧
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://bitbucket.org/rudoapps/angular_architecture.git
 ```
 
 Go to the project directory
@@ -38,7 +38,35 @@ Install dependencies
 ```bash
   npm install
 ```
+## Generación automatica de dominio 📌
+ Para poder generar un dominio junto con sus capas de manera rapida podemos usar el escript incluido en este repositorio:
+```bash
+  npm run domain
+```
+Despues de pedirnos un nombre para crear el dominio podremos obeservar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api asi como su guardado en local y el uso de repositorios.\
+Por ultimo cabe destacar que el propio script nos dara mediante la consola todo los imports necesarios para que los peguemos en el modulo de data.\
+Ejemplo: 
 
+```bash
+  To use the domain you must add these imports in the data.module.ts file:
+
+         import {GetProductUseCase} from "@usecases/product/get-product.usecase";
+         import {ProductRepository} from "@repositories/product/product.repository";
+         import {ProductRemoteDataSource} from "@data/datasource/product/source/product-remote-datasource";
+         import {ProductImpRepository} from "@data/repositories/product/product-implementation.repository";
+         import {ProductRemoteDataSourceImp} from "@data/datasource/product/remote/product-remote-datasource-imp";
+         import {ProductLocalDataSourceImp} from "@data/datasource/product/local/product-local-datasource-imp";
+         import {ProductLocalDataSource} from "@data/datasource/product/source/product-local-datasource";
+
+
+ Module implementation:
+
+          GetProductUseCase,
+         { provide: ProductRepository, useClass: ProductImpRepository },
+         { provide: ProductRemoteDataSource, useClass: ProductRemoteDataSourceImp },
+         { provide: ProductLocalDataSource, useClass: ProductLocalDataSourceImp },
+
+```
 ## Versionado 📌
 
 Usaremos un versionado manual de la app incrementando el valor de la version con cada subida a producción.
@@ -62,8 +90,9 @@ Aun esta por determinar la forma de despliegue que se usara en este proyecto.
 ## Autores ✒️
 
 * **William Andres Aveiga** - *Angular Developer* - [william@rudo.es](william@rudo.es)
+* **Rafael Perera** - *Angular Developer* - [rafa@rudo.es](rafa@rudo.es)
+* **Pablo Serna** - *Angular Developer* - [pabloserna@rudo.es](pabloserna@rudo.es)
 
----
 ⌨️ con ❤️ por el equipo de  Angular😊
 
 [Angular logo]: https://cdn.freebiesupply.com/logos/large/2x/angular-3-logo-png-transparent.png
