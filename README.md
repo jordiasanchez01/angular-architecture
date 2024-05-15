@@ -38,14 +38,14 @@ Install dependencies
 ```bash
   npm install
 ```
-## Generación automatica de dominio 📌
+## Generación automática de dominio 📌
  Para poder generar un dominio junto con sus capas de manera rapida podemos usar el escript incluido en este repositorio:
 ```bash
   npm run domain
 ```
-Despues de pedirnos un nombre para crear el dominio podremos obeservar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api asi como su guardado en local y el uso de repositorios.\
-Por ultimo cabe destacar que el propio script nos dara mediante la consola todo los imports necesarios para que los peguemos en el modulo de data.\
-Ejemplo: 
+Después de pedirnos un nombre para crear el dominio, podremos observar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales, por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api así como su guardado en local y el uso de repositorios.<br/>
+Por último cabe destacar que el propio script nos dará mediante la consola todos los imports necesarios para que los peguemos en el módulo de data. <br/>
+Ejemplo:
 
 ```bash
   To use the domain you must add these imports in the data.module.ts file:
