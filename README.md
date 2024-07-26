@@ -3,28 +3,27 @@
 ![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![](	https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 # Angular Clean Architecture
 
-Arquitectura basada en una arquitectura limpia y principios sólidos.
+Arquitectura basada en clean y principios de solid.
 
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu ordenador local para propósitos de desarrollo y pruebas._
-
-
 
 ### Pre-requisitos 📋
 
 | Herramienta |  Versión                |
 | :-------- |  :------------------------- |
 | `Node Js` |**20.7.0** |
-| `Angular Cli` | **16.2.10** |
+| `Angular Cli` | **17.3.12** |
 | `Pakage Manager (NPM)` |  **10.1.0** |
-| `OS` |  **Ventura 13.1** |
+| `OS` |  **Sonoma 14.5** |
 
 ### Puesta en marcha 🔧
+
 Clone the project
 
 ```bash
-  git clone https://bitbucket.org/rudoapps/angular_architecture.git
+  git clone https://github.com/WilliamAndreu/angular_clean_architecture
 ```
 
 Go to the project directory
@@ -38,13 +37,18 @@ Install dependencies
 ```bash
   npm install
 ```
+
 ## Generación automática de dominio 📌
- Para poder generar un dominio junto con sus capas de manera rapida podemos usar el escript incluido en este repositorio:
+
+ Para poder generar un dominio junto con sus capas de manera rapida podemos usar el script incluido en este repositorio:
+
 ```bash
   npm run domain
 ```
-Después de pedirnos un nombre para crear el dominio, podremos observar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales, por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api así como su guardado en local y el uso de repositorios.<br/>
-Por último cabe destacar que el propio script nos dará mediante la consola todos los imports necesarios para que los peguemos en el módulo de data. <br/>
+
+Después de pedirnos un nombre para crear el dominio, podremos observar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales, por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api así como su guardado en local y el uso de repositorios.
+
+Por último cabe destacar que el propio script nos dará mediante la consola todos los imports necesarios para que los peguemos en el módulo de data.
 Ejemplo:
 
 ```bash
@@ -67,6 +71,7 @@ Ejemplo:
          { provide: ProductLocalDataSource, useClass: ProductLocalDataSourceImp },
 
 ```
+
 ## Versionado 📌
 
 Usaremos un versionado manual de la app incrementando el valor de la version con cada subida a producción.
@@ -74,7 +79,6 @@ Usaremos un versionado manual de la app incrementando el valor de la version con
 ## Ejecutando las pruebas ⚙️
 
 Este proyecto aun no tiene pruebas que se puedan ejecutar
-
 
 ## Despliegue 📦
 
@@ -86,13 +90,14 @@ Aun esta por determinar la forma de despliegue que se usara en este proyecto.
 * [VisualStudio](https://visualstudio.microsoft.com/es/) - IDE de desarrollo
 * [Node Js](https://nodejs.org/es) - Entorno de ejecución JavaScript
 
+## Contribuidores ✒️
 
-## Autores ✒️
+* **Rafael Perera**
+* **Pablo Serna**
+* **Gabriel Puglisi** - [Angular Developer](https://www.linkedin.com/in/gabriel-puglisi-381998159/)
+* **Marcel del Toro Sempere**
+* **William Andres Aveiga** - [Angular Developer](https://github.com/WilliamAndreu)
 
-* **William Andres Aveiga** - *Angular Developer* - [william@rudo.es](william@rudo.es)
-* **Rafael Perera** - *Angular Developer* - [rafa@rudo.es](rafa@rudo.es)
-* **Pablo Serna** - *Angular Developer* - [pabloserna@rudo.es](pabloserna@rudo.es)
+⌨️ con ❤️ para la comunidad de Angular 😊
 
-⌨️ con ❤️ por el equipo de  Angular😊
-
-[Angular logo]: https://cdn.freebiesupply.com/logos/large/2x/angular-3-logo-png-transparent.png
+[Angular logo]: https://raw.githubusercontent.com/rudoapps/hybrid-storage/main/angular/images/angular_logo.png
