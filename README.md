@@ -3,22 +3,25 @@
 ![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![](	https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 # Angular Clean Architecture
 
-Arquitectura basada en clean y principios de solid.
+Architecture based on clean and solid principles.
 
-## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu ordenador local para propósitos de desarrollo y pruebas._
+[Angular Architecture Demo](https://angular-clean-architecture-eight.vercel.app/)
 
-### Pre-requisitos 📋
+## Beginning 🚀
 
-| Herramienta |  Versión                |
+_These instructions will allow you to get a copy of the project running on your local computer for development and testing purposes.._
+
+### Pre-requisites 📋
+
+| Tool |  Version                |
 | :-------- |  :------------------------- |
-| `Node Js` |**20.7.0** |
-| `Angular Cli` | **17.3.12** |
-| `Pakage Manager (NPM)` |  **10.1.0** |
+| `Node Js` |**20.15.1** |
+| `Angular Cli` | **19.0.6** |
+| `Pakage Manager (NPM)` |  **10.8.3** |
 | `OS` |  **Sonoma 14.5** |
 
-### Puesta en marcha 🔧
+### Start-up 🔧
 
 Clone the project
 
@@ -38,18 +41,18 @@ Install dependencies
   npm install
 ```
 
-## Generación automática de dominio 📌
+## Automatic domain generation 📌
 
- Para poder generar un dominio junto con sus capas de manera rapida podemos usar el script incluido en este repositorio:
+ In order to generate a domain and its layers quickly we can use the script included in this repository:
 
 ```bash
   npm run domain
 ```
 
-Después de pedirnos un nombre para crear el dominio, podremos observar que se han generado los archivos necesarios para poder importar, editar y ejecutar nuestros casos de uso. Los archivos que se crean ya son funcionales, por lo que no hace falta editarlos en primera instancia proveyendo un ejemplo de llamadas a una Api así como su guardado en local y el uso de repositorios.
+After asking for a name to create the domain, we can see that the necessary files have been generated to be able to import, edit and execute our use cases. The files that are created are already functional, so there is no need to edit them in the first instance providing an example of calls to an Api as well as its saving in local and the use of repositories.
 
-Por último cabe destacar que el propio script nos dará mediante la consola todos los imports necesarios para que los peguemos en el módulo de data.
-Ejemplo:
+Finally it is worth noting that the script itself will give us through the console all the necessary imports for us to paste them in the data module.
+Example:
 
 ```bash
   To use the domain you must add these imports in the data.module.ts file:
@@ -72,25 +75,28 @@ Ejemplo:
 
 ```
 
-## Versionado 📌
+## Versioning 📌
 
-Usaremos un versionado manual de la app incrementando el valor de la version con cada subida a producción.
+We will use manual versioning of the app by increasing the version value with each upload to production.
 
-## Ejecutando las pruebas ⚙️
+## Running the tests ⚙️
 
-Este proyecto aun no tiene pruebas que se puedan ejecutar
+To run the tests with Jest just execute:
+```bash
+ npm run test
+ ```
 
-## Despliegue 📦
+## Deployment 📦
 
-Aun esta por determinar la forma de despliegue que se usara en este proyecto.
+This project has a demo deployed using vercel for environment configuration and automatic deployment.
 
-## Construido con 🛠️
+## Built with 🛠️
 
-* [Angular](https://angular.io/) - El framework web usado
-* [VisualStudio](https://visualstudio.microsoft.com/es/) - IDE de desarrollo
-* [Node Js](https://nodejs.org/es) - Entorno de ejecución JavaScript
+* [Angular](https://angular.io/) - The web framework used
+* [VisualStudio](https://visualstudio.microsoft.com/es/) - Development IDE
+* [Node Js](https://nodejs.org/es) - JavaScript execution environment
 
-## Contribuidores ✒️
+## Contributors ✒️
 
 * **Rafael Perera**
 * **Pablo Serna**
@@ -98,6 +104,6 @@ Aun esta por determinar la forma de despliegue que se usara en este proyecto.
 * **Marcel del Toro Sempere**
 * **William Andres Aveiga** - [Angular Developer](https://github.com/WilliamAndreu)
 
-⌨️ con ❤️ para la comunidad de Angular 😊
+⌨️ with ❤️ for the Angular community 😊
 
 [Angular logo]: https://raw.githubusercontent.com/rudoapps/hybrid-storage/main/angular/images/angular_logo.png
