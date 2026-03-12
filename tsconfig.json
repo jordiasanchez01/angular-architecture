@@ -1,47 +1,81 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
     "strict": true,
     "noImplicitOverride": true,
-    "esModuleInterop": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
+    "skipLibCheck": true,
+    "isolatedModules": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "es2020",
-    "lib": ["es2020", "dom"],
+    "module": "preserve",
     "paths": {
-      "@directives/*": ["src/core/directives/*"],
-      "@guards/*": ["src/core/guards/*"],
-      "@interceptors/*": ["src/core/interceptors/*"],
-      "@interface-core/*": ["src/core/core-interface/*"],
-      "@pipes/*": ["src/core/pipes/*"],
-      "@shared/*": ["src/core/shared/*"],
-      "@utils/*": ["src/core/utils/*"],
-      "@data/*": ["src/data/*"],
-      "@di/*": ["src/data/di/*"],
-      "@models/*": ["src/domain/entities/*"],
-      "@repositories/*": ["src/domain/repositories/*"],
-      "@usecases/*": ["src/domain/usecases/*"],
-      "@view_models/*": ["src/presentation/app/view-models/*"],
-      "@views/*": ["src/presentation/app/views/*"],
-      "@environments/*": ["src/core/environments/*"]
-    },
-    "useDefineForClassFields": false
+      "@directives/*": [
+        "src/core/directives/*"
+      ],
+      "@guards/*": [
+        "src/core/guards/*"
+      ],
+      "@interceptors/*": [
+        "src/core/interceptors/*"
+      ],
+      "@interface-core/*": [
+        "src/core/core-interface/*"
+      ],
+      "@pipes/*": [
+        "src/core/pipes/*"
+      ],
+      "@utils/*": [
+        "src/core/utils/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@di/*": [
+        "src/data/di/*"
+      ],
+      "@models/*": [
+        "src/domain/entities/*"
+      ],
+      "@repositories/*": [
+        "src/domain/repositories/*"
+      ],
+      "@usecases/*": [
+        "src/domain/usecases/*"
+      ],
+      "@layouts/*": [
+        "src/presentation/app/layouts/*"
+      ],
+      "@views/*": [
+        "src/presentation/app/views/*"
+      ],
+      "@shared/*": [
+        "src/presentation/shared/*"
+      ],
+      "@environments/*": [
+        "src/core/environments/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }
