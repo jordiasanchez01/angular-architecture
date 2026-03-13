@@ -1,8 +1,12 @@
+<div align="center">
+
 # Angular Clean Architecture
 
 **A production-ready Clean Architecture + MVVM template for Angular**
 
 Built with the latest Angular features: signals, zoneless change detection, and standalone components.
+
+<br/>
 
 [![Angular](https://img.shields.io/badge/Angular-21.2-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -10,6 +14,8 @@ Built with the latest Angular features: signals, zoneless change detection, and 
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-4.2-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Vitest](https://img.shields.io/badge/Vitest-4.0-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-25.6.1-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+
+</div>
 
 ---
 
