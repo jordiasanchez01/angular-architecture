@@ -5,6 +5,7 @@ import { GetAuthUserUseCase } from '@usecases/auth/get-auth-user.usecase';
 import { AuthLocalDataSource } from '@data/datasource/auth/source/auth-local.datasource';
 import { ViewState } from '@interfaces/view-state';
 import { AppError } from 'src/core/errors/app-error';
+import { SessionExpiredError } from 'src/domain/errors/auth/auth.errors';
 
 @Injectable()
 export class UserDetailViewModel {
@@ -25,6 +26,11 @@ export class UserDetailViewModel {
         this.state.isLoading.set(false);
       },
       error: (err: unknown) => {
+        if (err instanceof SessionExpiredError) {
+          this.authLocal.clearTokens();
+          this.router.navigate(['/login']);
+          return;
+        }
         this.state.error.set(err instanceof AppError ? err.messageKey : 'errors.unknown');
         this.state.isLoading.set(false);
       },
