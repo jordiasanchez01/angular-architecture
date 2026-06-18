@@ -20,6 +20,6 @@ export const PUBLIC_LAYOUT_ROUTES: Routes = [
     path: 'login',
     canActivate: [guestGuard],
     providers: [provideAuthDI()],
-    loadComponent: () => import('@views/login-view/login-view').then((m) => m.LoginView),
+    loadComponent: () => import('@views/login2-view/login-view').then((m) => m.LoginView),
   },
 ];
