@@ -1,7 +1,10 @@
-import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslatePipe } from '@ngx-translate/core';
-import { LucideEye, LucideMail, LucideLock } from '@lucide/angular';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 export interface LoginFormValue {
   username: string;
@@ -11,7 +14,14 @@ export interface LoginFormValue {
 @Component({
   selector: 'app-login-form',
   standalone: true,
-  imports: [ReactiveFormsModule, TranslatePipe, LucideMail, LucideEye, LucideLock],
+  imports: [
+    ReactiveFormsModule,
+    TranslatePipe,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
   templateUrl: './login-form.html',
   styleUrl: './login-form.scss',
 })
@@ -30,5 +40,11 @@ export class LoginForm {
   onSubmit(): void {
     if (this.form.invalid) return;
     this.submitted.emit(this.form.getRawValue());
+  }
+
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
   }
 }

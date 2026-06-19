@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-8">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-8 landscape:gap-1.5">
   @if (error) {
     <div
       class="flex items-start gap-2.5 bg-red-500/6 border border-red-500/18 text-red-400/80 text-xs px-3.5 py-2.5 rounded-xl"
@@ -20,47 +20,41 @@
 
   <div class="flex flex-col gap-1.5">
     <div class="relative">
-      <span class="absolute left-3 top-1/2 -translate-y-1/2 text-black">
-        <!-- icon goes here -->
-        <svg lucideMail [size]="20" color="currentColor" [strokeWidth]="1.5"></svg>
-      </span>
-      <input
-        id="username"
-        formControlName="username"
-        type="text"
-        autocomplete="username"
-        placeholder="Email*"
-        class="w-full bg-white border border-black rounded-sm ps-12 pe-4 py-4 text-body text-red-400/80 placeholder:text-black outline-none transition-all duration-200 focus:bg-white focus:border-black focus:ring-1 focus:ring-white/12"
-      />
+      <mat-form-field appearance="outline" class="w-full thick-border">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          id="username"
+          formControlName="username"
+          type="text"
+          autocomplete="username"
+        />
+      </mat-form-field>
     </div>
   </div>
-
   <div class="flex flex-col gap-1.5">
     <div class="relative">
-      <span class="absolute left-3 top-1/2 -translate-y-1/2 text-black">
-        <!-- icon goes here -->
-        <svg lucideLock [size]="20" color="currentColor" [strokeWidth]="1.5"></svg>
-      </span>
-      <span class="absolute right-3 top-1/2 -translate-y-1/2 text-black">
-        <!-- icon goes here -->
-        <svg lucideEye [size]="20" color="currentColor" [strokeWidth]="1.5"></svg>
-      </span>
-      <input
-        id="password"
-        formControlName="password"
-        type="password"
-        autocomplete="current-password"
-        placeholder="Contraseña*"
-        class="w-full bg-white border border-black rounded-sm ps-12 pe-4 py-4 text-body text-black/80 placeholder:text-black outline-none transition-all duration-200 focus:bg-white focus:border-black focus:ring-1 focus:ring-white/12"
-      />
+      <mat-form-field appearance="outline" class="w-full thick-border">
+        <mat-label>Contraseña</mat-label>
+        <input
+          id="password"
+          formControlName="password"
+          matInput
+          [type]="hide() ? 'password' : 'text'"
+        />
+        <button
+          matIconButton
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
     </div>
   </div>
-
-  <button
-    type="submit"
-    [disabled]="isLoading || form.invalid"
-    class="w-full bg-gray-400 text-gray-950 font-semibold text-body py-3 rounded-full mt-1 transition-all duration-200 hover:bg-gray-700/95 disabled:opacity-40 disabled:cursor-not-allowed"
-  >
+  <button matButton="filled" type="submit" [disabled]="isLoading || form.invalid" class="my-button">
     @if (isLoading) {
       <span class="inline-flex items-center gap-1.5">
         <span class="w-1 h-1 rounded-full bg-bg-deep/60 animate-bounce-dot"></span>

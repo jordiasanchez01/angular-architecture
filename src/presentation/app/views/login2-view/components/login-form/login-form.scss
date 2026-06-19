@@ -6,3 +6,21 @@ input {
   font-size: 18px;
   font-family: Arial, cursive;
 }
+
+mat-form-field.thick-border {
+  --mat-form-field-outlined-outline-width: 2px;
+  --mat-form-field-outlined-focus-outline-width: 3px;
+}
+
+button.my-button {
+  width: 100%;
+  --mat-button-filled-container-color: #60269e;
+  --mat-button-filled-label-text-color: #ffffff;
+  --mat-button-filled-container-height: 48px;
+  --mat-button-filled-container-shape: 22px;
+  --mat-button-filled-label-text-size: 15px;
+  --mat-button-filled-label-text-weight: 600;
+  --mat-button-filled-state-layer-color: #ffffff;
+  --mat-button-filled-hover-state-layer-opacity: 0.08;
+  --mat-button-filled-pressed-state-layer-opacity: 0.12;
+}

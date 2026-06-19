@@ -18,6 +18,6 @@
     "stock": "Stock",
     "units": "units"
   },
-  "profile": { "email": "Email", "gender": "Gender", "sign_out": "Sign out" },
+  "profile": { "email": "Email ", "gender": "Gender", "sign_out": "Sign out" },
   "common": { "back": "Products", "loading": "Loading...", "retry": "Retry" }
 }
